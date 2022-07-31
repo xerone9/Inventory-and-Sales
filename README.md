@@ -54,6 +54,7 @@ _Invoices Will Also Be deleted from the company names folder in OS standard docu
 
 9- Sales Report (Date Ranged Must Be Given First)
 
+______________________________________________________________________________________________________________
 ### Development:
 In python _with native programming skills_
 
