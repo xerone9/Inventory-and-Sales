@@ -64,6 +64,8 @@ You can set Compamny name in enter_footer_here.ini max 2 lines
 
 This software will create a folder by company_name + invoices in Documents folder and store invoices there. So if you change the compnay name later onwards another folder will be created in documents folder and all new invoices will be stroed there and you wont be able to delete old invoices after changing the name. So it is recommended that set the company name first
 
+It is also recommended that set chrome as default PDF Viewer if not then close any opened PDF report first then open another one
+
 ______________________________________________________________________________________________________________
 ### Development:
 In python _with native programming skills_
