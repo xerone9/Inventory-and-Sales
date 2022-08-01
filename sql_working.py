@@ -887,7 +887,7 @@ def temporary():
     c = conn.cursor()
 
     c.execute("""
-    DELETE FROM Invoices;
+    DELETE FROM Inventory_Statusssss;
     """)
 
     conn.commit()

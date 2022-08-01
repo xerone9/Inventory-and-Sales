@@ -45,7 +45,7 @@ def generate_invioce_report(invoice_no):
                 address = customer_address[:73]
                 address1 = customer_address[73:]
                 self.cell(40, 6, 'Customer Address: ' + address + '-', border=False, ln=1, align='L')
-                self.cell(40, 6, address1, border=False, ln=1, align='L')
+                self.cell(40, 6, address1, border=False, ln=0, align='L')
             else:
                 self.cell(40, 6, 'Customer Address: ' + customer_address, border=False, ln=1, align='L')
 

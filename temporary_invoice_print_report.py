@@ -41,13 +41,19 @@ def temporary_invioce_print(invoice_no):
             self.cell(150, 6, 'Invoice Date : ' + invoice_date, border=False, ln=1, align='R')
             self.cell(40, 6, 'Customer NIC: ' + customer_nic_no, border=False, ln=0, align='L')
             self.cell(150, 6, 'Invoice Number:      ' + str(invoice_no), border=False, ln=1, align='R')
-            self.cell(40, 6, 'Customer Address: ' + customer_address, border=False, ln=1, align='L')
+            if len(customer_address) > 73:
+                address = customer_address[:73]
+                address1 = customer_address[73:]
+                self.cell(40, 6, 'Customer Address: ' + address + '-', border=False, ln=1, align='L')
+                self.cell(40, 6, address1, border=False, ln=0, align='L')
+            else:
+                self.cell(40, 6, 'Customer Address: ' + customer_address, border=False, ln=1, align='L')
 
             self.set_line_width(0.5)
             self.set_draw_color(r=0, g=0, b=0)
-            self.line(x1=10, y1=65, x2=200, y2=65)
+            self.line(x1=10, y1=70, x2=200, y2=70)
             # Line break
-            self.ln(5)
+            self.ln(10)
 
             self.set_font('times', 'B', 12)
             self.cell(1)

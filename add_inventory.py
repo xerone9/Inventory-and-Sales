@@ -3,11 +3,11 @@ from sql_working import *
 from tkinter import ttk
 
 
-
 def add_inventory():
     def splash_screen(error):
         splash_root = Toplevel()
         splash_root.title('Error')
+        splash_root.iconbitmap('icon.ico')
         splash_root.geometry("750x100")
         splash_root.resizable(0, 0)
         error = Label(splash_root, text=str(error), padx=10, pady=10, fg="red", font=("Roboto", 15))
@@ -204,7 +204,4 @@ def add_inventory():
         my_tree.insert(parent="", index='end', iid=count, text=count + 1,
                                 values=(value[0], value[1], value[2]))
         count += 1
-
-
-
 

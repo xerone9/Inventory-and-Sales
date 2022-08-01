@@ -10,6 +10,7 @@ def generate_invoice():
     def splash_screen(error):
         splash_root = Toplevel()
         splash_root.title('Error')
+        splash_root.iconbitmap('icon.ico')
         splash_root.geometry("750x100")
         splash_root.resizable(0, 0)
         error = Label(splash_root, text=str(error), padx=10, pady=10, fg="red", font=("Roboto", 15))
@@ -160,20 +161,20 @@ def generate_invoice():
                         count += 1
 
                     frame4 = LabelFrame(top, text="Grand Total: ", padx=10, pady=10)
-                    frame4.place(x=480, y=530)
+                    frame4.place(x=480, y=550)
 
                     global total_label
                     total_label = Label(frame4, text="Rs. " + "{:,}".format(total), font=("Roboto", 10, "bold"))
                     total_label.pack()
 
                     generate_invoice_button.configure(command=print_invoice)
-                    generate_invoice_button.place(x=370, y=620)
+                    generate_invoice_button.place(x=400, y=640)
 
                     delete_items_button.configure(command=getdata)
-                    delete_items_button.place(x=60, y=620)
+                    delete_items_button.place(x=60, y=640)
 
-                    discount_label.place(x=260, y=545)
-                    discount.place(x=380, y=545)
+                    discount_label.place(x=260, y=565)
+                    discount.place(x=380, y=565)
 
                     customer_name.grid_remove()
                     customer_contact_no.grid_remove()
@@ -198,7 +199,7 @@ def generate_invoice():
                     no_days_lock_label.grid(row=2, column=3, sticky='w')
 
                     address = str(delivery_address.get())
-                    if len(address) > 32:
+                    if len(address) > 70:
                         address = address[:70] + "-\n" + address[70:]
                         delivery_address_label.grid_remove()
                         delivery_address_lock_label.config(text=str(address), justify='left', fg="green")
@@ -303,7 +304,7 @@ def generate_invoice():
         delivery_address.grid(row=3, column=1, columnspan=3, sticky='w')
 
         frame2 = LabelFrame(top, text="Select Inventory Quantity", padx=10, pady=10)
-        frame2.place(x=15, y=180)
+        frame2.place(x=15, y=200)
 
         option = OptionMenu(frame2, variable, *item_types, command=item_name)
         option.configure(cursor="hand1")
@@ -320,7 +321,7 @@ def generate_invoice():
         last_invoice_no = str(int(get_last_invoice_No()) + 1)
 
         frame3 = LabelFrame(top, text="Current Invoice :   " + last_invoice_no + "  ", padx=10, pady=10)
-        frame3.place(x=15, y=260)
+        frame3.place(x=15, y=280)
 
         inventory_stock = ttk.Treeview(frame3, height=10, style="mystyle.Treeview")
         inventory_stock['columns'] = ("Item Type", "Item Name", "Rate", "Item Quantity", "For Days", "Total")

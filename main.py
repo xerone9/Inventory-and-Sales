@@ -14,15 +14,17 @@ from all_orders import all_orders
 from completed_orders import completed_orders
 from quick_estimate import quick_estimate
 from items_to_deliver import items_to_deliver
+from generate_invoice import generate_invoice
+from sales import sales
 
 # Reports
-from generate_invoice import generate_invoice
 from view_inventory_report import view_inventory_report
 from availabe_inventory_report import available_inventory_report
 from damaged_inventory_report import damaged_inventory_report
 from overall_inventory_report import overall_inventory_report
 from given_item_report import given_item_report
-from sales import sales
+
+
 
 def callback(url):
     webbrowser.open_new(url)
@@ -97,7 +99,5 @@ footer.bind("<Button-1>", lambda e: callback("http://softwares.rubick.org"))
 footer.configure(foreground="white")
 footer.configure(bg="black")
 footer.pack(side=BOTTOM)
-
-
 
 root.mainloop()
