@@ -54,6 +54,18 @@ _Invoices Will Also Be deleted from the company names folder in OS standard docu
 
 9- Sales Report (Date Ranged Must Be Given First)
 
+## Customization
+
+You can set Compamny name in enter_company_name.ini
+
+You can set Compamny name in enter_footer_here.ini max 2 lines
+
+## Note:
+
+This software will create a folder by company_name + invoices in Documents folder and store invoices there. So if you change the compnay name later onwards another folder will be created in documents folder and all new invoices will be stroed there and you wont be able to delete old invoices after changing the name. So it is recommended that set the company name first
+
+It is also recommended that set chrome as default PDF Viewer if not then close any opened PDF report first then open another one
+
 ______________________________________________________________________________________________________________
 ### Development:
 In python _with native programming skills_
@@ -63,3 +75,8 @@ For front end tkinter is used
 For reports FPDF library is used
 
 For database store and management SQLITE3 library is used
+
+### Compatiblility:
+Windows 7 sp1 or above
+
+
