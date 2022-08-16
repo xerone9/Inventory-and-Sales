@@ -79,4 +79,15 @@ For database store and management SQLITE3 library is used
 ### Compatiblility:
 Windows 7 sp1 or above
 
+______________________________________________________________________________________________________________
+### Oracle Apex:
+Redesigning the same project in Oracle Apex. (Learning Purpose)
+
+You are free to see and test the app
+
+Link: https://apex.oracle.com/pls/apex/r/rubick_erp/caterers-inventory-manager/login?session=3393113222158
+
+ID: user
+
+Pass: 123456789
 
